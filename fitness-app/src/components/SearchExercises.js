@@ -28,7 +28,18 @@ function SearchExercises() {
       borderRadius : "40px"
       }}
       />
-        <Button>
+        <Button className="search-btn"
+        sx={{
+          backgroundColor:"#FF2625",
+          color:"#fff",
+          textTransform:"none",
+          width:{lg : "175px" , xs : "80px"},
+          fontSize:{lg : "20px" , xs : "14px"},
+          height : "56px",
+          position : "absolute",
+          right : "0"
+        }}
+        >
         Search
         </Button>
       </Box>
