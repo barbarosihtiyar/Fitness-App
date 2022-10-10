@@ -1,7 +1,9 @@
 import React from 'react';
 import {Box,Button,Stack,TextField,Typography} from '@mui/material'
+import {useState,useEffect} from 'react';
 
 function SearchExercises() {
+  const [search,setSearch] = useState("");
   return (
     <Stack justifyContent="center" alignItems="center"  mt="37px" padding="20px">
       <Typography fontWeight="700" mb="50px" textAlign="center"
