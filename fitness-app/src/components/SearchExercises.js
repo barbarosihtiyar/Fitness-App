@@ -4,6 +4,11 @@ import {useState,useEffect} from 'react';
 
 function SearchExercises() {
   const [search,setSearch] = useState("");
+  const handleSearch = async () => {
+    if(search) {
+      // const exercisesData = await fetchDate();
+    }
+  }
   return (
     <Stack justifyContent="center" alignItems="center"  mt="37px" padding="20px">
       <Typography fontWeight="700" mb="50px" textAlign="center"
@@ -16,7 +21,7 @@ function SearchExercises() {
       <Box position="relative" mb="72px" height="76px" >
        <TextField 
       value={search} 
-      onChange={(e) => setSearc(e.target.value)}
+      onChange={(e) => setSearch(e.target.value.toLowerCase)}
       placeHolder="Search Exercises"
       type="text"
       sx = {{
@@ -40,6 +45,7 @@ function SearchExercises() {
           position : "absolute",
           right : "0"
         }}
+        onClick={handleSearch}
         >
         Search
         </Button>
