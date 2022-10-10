@@ -15,8 +15,8 @@ function SearchExercises() {
       </Typography>
       <Box position="relative" mb="72px" height="76px" >
        <TextField 
-      value="" 
-      onChange={(e) => {}}
+      value={search} 
+      onChange={(e) => setSearc(e.target.value)}
       placeHolder="Search Exercises"
       type="text"
       sx = {{
