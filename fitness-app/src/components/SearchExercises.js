@@ -1,12 +1,14 @@
 import React from 'react';
 import {Box,Button,Stack,TextField,Typography} from '@mui/material'
 import {useState,useEffect} from 'react';
+import {exerciseOptions , fetchData} from '../utils/fetchData';
 
 function SearchExercises() {
   const [search,setSearch] = useState("");
   const handleSearch = async () => {
     if(search) {
-      // const exercisesData = await fetchDate();
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+    console.log(exercisesData);    
     }
   }
   return (
@@ -22,7 +24,7 @@ function SearchExercises() {
        <TextField 
       value={search} 
       onChange={(e) => setSearch(e.target.value.toLowerCase)}
-      placeHolder="Search Exercises"
+      placeholder="Search Exercises"
       type="text"
       sx = {{
         input : {fontWeight : "700" , 
