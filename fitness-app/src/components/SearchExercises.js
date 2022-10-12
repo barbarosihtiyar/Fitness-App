@@ -2,6 +2,7 @@ import React from 'react';
 import {Box,Button,Stack,TextField,Typography} from '@mui/material'
 import {useState,useEffect} from 'react';
 import {exerciseOptions , fetchData} from '../utils/fetchData';
+import HorizontalScroollBar from './HorizontalScroollBar';
 
 function SearchExercises() {
   const [search,setSearch] = useState("");
