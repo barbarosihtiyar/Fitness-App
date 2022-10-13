@@ -2,6 +2,7 @@ import React from 'react';
 import {Box} from '@mui/material';
 
 function HorizontalScroollBar({data}) {
+  const [horizontal,setHorizontal] = useState("");
   return (
     <div>
         {data.map((item,index) => (
