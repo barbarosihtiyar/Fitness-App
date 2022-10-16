@@ -3,6 +3,8 @@ import {Box} from '@mui/material';
 
 function HorizontalScroollBar({data}) {
   const [horizontal,setHorizontal] = useState("");
+  const [bar,setBar] = useState("");
+
   return (
     <div>
         {data.map((item,index) => (
