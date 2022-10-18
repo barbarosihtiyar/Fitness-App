@@ -13,7 +13,7 @@ function HorizontalScroollBar({data}) {
         title = {item.id || item}
         m="0 40px"    
         >
-            <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+            <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
         </Box>
         ))}
     </div>
