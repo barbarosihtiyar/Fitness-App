@@ -2,7 +2,7 @@ import React from 'react';
 import {Box} from '@mui/material';
 import BodyPart from './BodyPart';
 
-function HorizontalScroollBar({data}) {
+function HorizontalScroollBar({data, bodyParts , setBodyPart}) {
 
   return (
     <div>
