@@ -30,8 +30,6 @@ function SearchExercises() {
         || exercise.bodyPart.name.toLowerCase().includes(search)
       );
 
-      setSearch("");
-      setExercises(searchedExercises);
     }
   }
   return (
