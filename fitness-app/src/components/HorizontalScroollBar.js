@@ -1,12 +1,13 @@
-import React from 'react';
-import {Box} from '@mui/material';
+import React , {useContext} from 'react';
+import {Box,Typography} from '@mui/material';
 import BodyPart from './BodyPart';
 import {ScroolMenu,visibilityContext} from 'react-horizontal-scrolling-menu';
+import BodyPart from './BodyPart';
 
-function HorizontalScroollBar({data, bodyPart , setBodyPart}) {
+const HorizontalScroollBar =({data, bodyPart , setBodyPart}) =>   {
 
   return (
-    <ScroolMenu>
+    <ScroolMenu LeftArrow={LeftArrow} RigtArrow={RightArrow}>
         {data.map((item,index) => (
         <Box 
         key={index}
