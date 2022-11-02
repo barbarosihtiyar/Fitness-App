@@ -15,7 +15,9 @@ function Exercises({exercises , setExercises , bodyPart}) {
     </Typography>
     <Stack direction="row" sx={{gap:{lg:"110px",xs:"50px"}}}
     flexWrap="wrap" justifyContent="center">
-
+    {exercises.map((exercise,index) => (
+      <p>{exercise.name}</p>
+    ))}
     </Stack>
     </Box>
   )
