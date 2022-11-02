@@ -5,7 +5,13 @@ import {exerciseOptions,fetchData} from '../utils/fetchData';
 
 function Exercises({exercises , setExercises , bodyPart}) {
   return (
-    <div>Exercises</div>
+    <Box id="exercises"
+      sx={{mt:{lg:"110px"}}}
+      mt="50px"
+      p="20px"
+      >
+
+    </Box>
   )
 }
 
