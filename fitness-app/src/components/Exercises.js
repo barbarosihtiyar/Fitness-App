@@ -10,7 +10,9 @@ function Exercises({exercises , setExercises , bodyPart}) {
       mt="50px"
       p="20px"
       >
-
+    <Typography varian="h3" mb="46px">
+    Showing Results
+    </Typography>
     </Box>
   )
 }
