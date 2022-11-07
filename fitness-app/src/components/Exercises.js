@@ -5,7 +5,8 @@ import {exerciseOptions,fetchData} from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({exercises,setExercises,bodyPart}) => {
-  console.log(exercises);
+  const[currentPage,setCurrentPage] = useState(1);
+  const exercisesPage = 9;
 }
 
 function Exercises({exercises , setExercises , bodyPart}) {
@@ -24,6 +25,20 @@ function Exercises({exercises , setExercises , bodyPart}) {
     {exercises.map((exercise,index) => (
       <ExerciseCard key={index} exercise={exercise} />
     ))}
+    </Stack>
+    <Stack mt="100px" alignItems="center">
+      {exercises.length > 9 && (
+        <Pagination  
+           color="standard"
+           shape="rounded"
+           defaultPage={1}
+           count={Math.ceil(exercise.length / 
+           exercisesPage)}
+           page={currentPage}
+           onChange={paginate}
+           size="large"
+        />
+      )}
     </Stack>
     </Box>
   )
