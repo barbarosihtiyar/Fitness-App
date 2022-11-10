@@ -6,11 +6,16 @@ import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const exercisesPage = 9;
+  const exercisesPerPage = 9;
 
   const indexOfLastExercise = currentPage * exercisesPerPage;
 
-  const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+
+  const currentExercise = exercises.slice(
+    indexOfFirstExercise,
+    indexOfLastExercise
+  );
 
   const paginate = (e, value) => {
     setCurrentPage(value);
@@ -39,7 +44,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             color="standard"
             shape="rounded"
             defaultPage={1}
-            count={Math.ceil(exercises.length / exercisesPage)}
+            count={Math.ceil(exercises.length / exercisesPerPage)}
             page={currentPage}
             onChange={paginate}
             size="large"
