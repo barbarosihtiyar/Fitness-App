@@ -40,6 +40,18 @@ function Detail({ exerciseDetail }) {
               is one of the best exercises to target your {target}.It will help
               you improve your mood and gain energy.
             </Typography>
+            {extraDetail.map((item) => (
+              <Stack
+                key={item.name}
+                direction="row"
+                gap="24px"
+                alingItems="center"
+              >
+                <Button>
+                  <img src={item.icon} />
+                </Button>
+              </Stack>
+            ))}
           </Stack>
         ))}
       </Stack>
