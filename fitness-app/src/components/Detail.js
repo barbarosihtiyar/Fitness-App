@@ -4,6 +4,7 @@ import { Typography, Stack, Button } from "@mui/icon/material";
 import BodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/body-part.png";
 import EquipmentImage from "../assets/icons/body-part.png";
+import { useState, useEffect } from "react";
 
 function Detail({ exerciseDetail }) {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
