@@ -23,6 +23,8 @@ function ExerciseDetail() {
         exerciseOptions
       );
       setExerciseDetail(exerciseDetailData);
+
+      const exerciseVideosData=await fetchData(`${youtubeSearchUrl}/serch?q=${exerciseDetailData.name},exerciseOptions`);
     };
     fetchExerciseData();
   }, [id]);
